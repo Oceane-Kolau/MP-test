@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap");
+
+:root {
+  --white: #fff;
+  --whitesmoke: #eff2f7;
+  --whitesmoke-2: #e9e9e9;
+  --darkgrey: #2c3e50;
+  --coral: #e9785a;
+  --dark-orange-1: #e3532d;
+  --dark-orange-2: #e55c38;
+  --light-yellow: #fffae1;
+  --light-green: #e1ffe5;
+
+  --border-radius: 0.3rem;
+}
+
+body {
+  display: flex;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-align: left;
+  background-color: var(--whitesmoke);
+  color: var(--darkgrey);
+}
+
+#app {
+  text-align: center;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#card {
+  margin-top: 1rem;
+  border-radius: var(--border-radius);
+  text-align: left;
+  background-color: var(--white);
+  padding: 2rem;
+}
+
+#card-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--whitesmoke-2);
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+#card > p {
+  margin: 2.2rem 0 0 0;
+}
+
+.card-icon > svg {
+  vertical-align: bottom;
+  display: inline-block;
+  margin-right: 1rem;
+  width: 2.3rem;
+  height: 3.1rem;
+}
+
+.arrow-link > svg {
+  width: 25px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 0.5rem;
+  fill: currentColor;
+  transition: all 0.35s ease-in-out;
+}
+
+.arrow-link,
+button {
+  color: var(--coral);
+}
+
+.arrow-link:hover {
+  color: var(--dark-orange-1);
+}
+
+button {
+  background: var(--coral);
+  border: 1px solid transparent;
+  color: var(--white);
+  font: inherit;
+  text-transform: uppercase;
+  padding: 0.75em 2em;
+  border-radius: var(--border-radius);
+  margin: 3rem 0 3rem 0;
+  transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--dark-orange-2);
+  border-color: var(--dark-orange-1);
+}
+
+.container-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#box {
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-top: 0.7rem;
+  background-color: var(--white);
+  width: 100%;
+}
+
+#box:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.circle {
+  border-radius: 10rem;
+  display: inline-block;
+  height: 4rem;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 4rem;
+  flex-shrink: 0;
+  line-height: 3.75rem;
+}
+
+.circle > svg {
+  width: 2.3rem;
+  height: 4rem;
+}
+
+.circle-marketplaces {
+  background-color: var(--light-yellow);
+}
+
+.circle-crowdfunding {
+  background-color: var(--light-green);
+}
+
+.card-icon,
+.box-link-marketplaces {
+  --color-1: #ffce00;
+  --color-2: #ffe340;
+  --color-3: #ffe340;
+  color: var(--color-1);
+}
+
+.box-link-crowdfunding {
+  --color-1: #44bc5e;
+  --color-2: #4dd96e;
+  --color-3: #4dd96e;
+  color: var(--color-1);
+}
+
+@media only screen and (min-width: 1224px) {
+  #app {
+    width: 100%;
+    max-width: 50rem;
+  }
+
+  #box {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #app {
+    max-width: 30rem;
+  }
+}

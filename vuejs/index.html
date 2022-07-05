@@ -1,0 +1,67 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<main id="app">
+    <article id="card">
+        <h1>
+            <span class="card-icon">
+                <svg>
+                    <use xlink:href="./assets/icon-marketplaces.svg#marketplaces"></use>
+                </svg>
+            </span>
+            {{ cardTitle }}
+        </h1>
+        <hr id="card-line" />
+        <p>{{ cardText }}</p>
+        <p>
+            <a class="arrow-link" href="https://www.mangopay.com/en_UK/" target="_blank" rel="noopener">
+                <svg>
+                    <use xlink:href="./assets/icon-arrow.svg#arrow"></use>
+                </svg>
+                {{ cardTitle }}
+            </a>
+        </p>
+    </article>
+    <section class="container-box">
+        <article id="box" v-for="box in activeBoxes">
+            <a v-bind:class="'box-link-' + box.boxTitle" href="https://www.mangopay.com/en_UK/" target="_blank"
+                rel="noopener">
+                <span v-bind:class="'circle circle-' + box.boxTitle">
+                    <svg>
+                        <use v-bind:xlink:href="'./assets/icon-' + box.boxTitle + '.svg#' + box.boxTitle"></use>
+                    </svg>
+                </span>
+                <h2>{{box.boxTitle}}</h2>
+            </a>
+        </article>
+    </section>
+    <button @click="newBox">Add a box</button>
+</main>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                cardTitle: "Quickstart marketplace",
+                cardText:
+                    "Launching your marketplace? Use this guide to understand the workflow and basic.",
+                index: 0,
+                activeBoxes: [],
+                boxItems: [
+                    { id: 1, boxTitle: "crowdfunding" },
+                    { id: 2, boxTitle: "marketplaces" },
+                ],
+            };
+        },
+        methods: {
+            newBox() {
+                this.index < this.boxItems.length - 1 ? this.index++ : (this.index = 0);
+                return this.activeBoxes.push(this.boxItems[this.index]);
+            },
+        },
+    })
+</script>
+
+<style>
+    @import './assets/global.css';
+</style>

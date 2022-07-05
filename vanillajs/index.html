@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/global.css">
+    <title>Tech test MP</title>
+</head>
+
+<body>
+    <main id="app">
+        <article id="card">
+            <h1>
+                <span class="card-icon">
+                    <svg>
+                        <use xlink:href="./assets/icon-marketplaces.svg#marketplaces"></use>
+                    </svg>
+                </span>
+                Quickstart marketplace
+            </h1>
+            <hr id="card-line" />
+            <p>
+                Launching your marketplace? Use this guide to understand the workflow
+                and basic.
+            </p>
+            <p>
+                <a class="arrow-link" href="https://www.mangopay.com/en_UK/" target="_blank" rel="noopener">
+                    <svg>
+                        <use xlink:href="./assets/icon-arrow.svg#arrow"></use>
+                    </svg>
+                    Quickstart marketplace
+                </a>
+            </p>
+        </article>
+        <section class="container-box"></section>
+        <button id="btn-new-box">Add a box</button>
+    </main>
+
+    <template id="template-box">
+        <article id="box">
+            <a class="'box-link-' + box.boxTitle" href="https://www.mangopay.com/en_UK/" target="_blank" rel="noopener">
+                <span>
+                    <svg>
+                        <use xlink:></use>
+                    </svg>
+                </span>
+                <h2></h2>
+            </a>
+        </article>
+    </template>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
